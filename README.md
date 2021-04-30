@@ -1,3 +1,3 @@
 # Testing Toolkit
 
-Providing reusable functions to help Test Engineers do their job easier.
+This is the Testing Toolkit package enabling Test Engineers, ensuring they have the useful helpers they need for their projects.
