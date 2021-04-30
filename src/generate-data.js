@@ -13,6 +13,9 @@ const emailAddress = () => {
   return email;
 };
 
+// Generate Password
+const password = () => `.${faker.internet.password()}!`;
+
 // Generate IP Address
 const ipAddress = (country) => {
   if (!country) {
@@ -36,7 +39,7 @@ const user = () => {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
     email: emailAddress(),
-    password: `.${faker.internet.password()}!`,
+    password: password(),
     ipAddress: ipAddress(),
     createdAt: pastDate(),
     expireAt: futureDate(),
@@ -44,9 +47,7 @@ const user = () => {
 };
 
 // Generate String
-const randomString = faker.fake(
-  '{{random.words}}-{{random.words}}-{{random.words}}',
-);
+const randomString = faker.fake('{{random.words}}');
 
 // Generate Phrase
 const randomPhrase = faker.fake(
@@ -54,6 +55,7 @@ const randomPhrase = faker.fake(
 );
 
 // Exports --------------------------------------------------------------------------------------------------
+
 module.exports = {
   emailAddress,
   ipAddress,
