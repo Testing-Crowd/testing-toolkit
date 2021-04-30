@@ -1,11 +1,11 @@
 // Functions ------------------------------------------------------------------------------------------------
 
-const errorLog = (errorName, errorDesc) => {
+const nowThrow = (errorName, errorDesc) => {
   throw Error(`${errorName}: ${errorDesc}`);
 };
 
 // Exports --------------------------------------------------------------------------------------------------
 
 module.exports = {
-  errorLog,
+  nowThrow,
 };

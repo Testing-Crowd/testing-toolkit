@@ -3,11 +3,12 @@ const faker = require('faker');
 
 // Functions ------------------------------------------------------------------------------------------------
 
+// Generate Random Number Only String
+const dateAsNumber = () => new Date().toISOString().replace(/[^0-9]/g, '');
+
 // Generate Email Address
 const emailAddress = () => {
-  const email = `test-${new Date()
-    .toISOString()
-    .replace(/[^0-9]/g, '')}-${Math.floor(
+  const email = `test-${dateAsNumber}-${Math.floor(
     Math.random() * 999999,
   )}@testingtoolkit.co.uk`;
   return email;
@@ -64,5 +65,6 @@ module.exports = {
   recentDate,
   randomString,
   randomPhrase,
+  dateAsNumber,
   user,
 };
