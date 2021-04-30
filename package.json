@@ -1,6 +1,6 @@
 {
   "name": "testing-toolkit",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Libraries helping Test Engineers.",
   "main": "index.js",
   "license": "UNLICENSED",
