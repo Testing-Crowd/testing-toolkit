@@ -4,13 +4,16 @@ const faker = require('faker');
 // Functions ------------------------------------------------------------------------------------------------
 
 // Generate UUID
-const uuid = () => generateUUID();
+const uuid = generateUUID();
 
 // Generate First Name
-const firstName = () => faker.name.firstName();
+const firstName =faker.name.firstName();
 
 // Generate Last Name
-const lastName = () => faker.name.lastName();
+const lastName =faker.name.lastName();
+
+// Generate Password
+const password = faker.internet.password();
 
 // Generate Email Address
 const emailAddress = () => {
@@ -29,11 +32,22 @@ const ipAddress = (country) => {
   }
 };
 
+// Generate Phrase 
+const phrase = faker.random.words(3).replace(' ', '-');
+
+// Generate Recent Date
+let recentDate = faker.date.recent();
+
+// Generate Future Date
+let futureDate = faker.date.future();
+
 // Exports --------------------------------------------------------------------------------------------------
 module.exports = {
+  uuid,
+  firstName,
+  lastName,
+  password,
   emailAddress,
   ipAddress,
-  lastName,
-  firstName,
-  uuid,
+  phrase,
 };
