@@ -48,11 +48,8 @@ const user = () => {
 };
 
 // Generate String
-const randomString = () => faker.fake('{{random.words}}');
-
-// Generate Phrase
-const randomPhrase = () =>
-  faker.fake('{{random.words}}-{{random.words}}-{{random.words}}');
+const randomString = (numberOfWords = 1, seperator = ' ') =>
+  faker.random.words(numberOfWords).replace(' ', seperator);
 
 // Exports --------------------------------------------------------------------------------------------------
 
@@ -64,7 +61,6 @@ module.exports = {
   futureDate,
   recentDate,
   randomString,
-  randomPhrase,
   dateAsNumber,
   user,
 };
