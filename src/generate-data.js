@@ -13,9 +13,6 @@ const emailAddress = () => {
   return email;
 };
 
-// Generate Password
-const password = `.${faker.internet.password()}!`;
-
 // Generate IP Address
 const ipAddress = (country) => {
   if (!country) {
@@ -24,24 +21,26 @@ const ipAddress = (country) => {
 };
 
 // Generate Past Date
-let pastDate = faker.date.past();
+const pastDate = () => faker.date.past();
 
 // Generate Recent Date
-let recentDate = faker.date.recent();
+const recentDate = () => faker.date.recent();
 
 // Generate Future Date
-let futureDate = faker.date.future();
+const futureDate = () => faker.date.future();
 
 // Generate User
-const user = {
-  id: generateUUID(),
-  firstName: faker.name.firstName(),
-  lastName: faker.name.lastName(),
-  email: emailAddress(),
-  password: password(),
-  ipAddress: ipAddress(),
-  createdAt: pastDate(),
-  expireAt: futureDate(),
+const user = () => {
+  return {
+    id: generateUUID(),
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
+    email: emailAddress(),
+    password: `.${faker.internet.password()}!`,
+    ipAddress: ipAddress(),
+    createdAt: pastDate(),
+    expireAt: futureDate(),
+  };
 };
 
 // Generate String
@@ -56,8 +55,6 @@ const randomPhrase = faker.fake(
 
 // Exports --------------------------------------------------------------------------------------------------
 module.exports = {
-  uuid,
-  password,
   emailAddress,
   ipAddress,
   pastDate,
