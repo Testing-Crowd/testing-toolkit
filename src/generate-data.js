@@ -6,13 +6,12 @@ const faker = require('faker');
 // Generate Random Number Only String
 const dateAsNumber = () => new Date().toISOString().replace(/[^0-9]/g, '');
 
+// Generate Number
+const randomNumber = () => Math.floor(Math.random() * 999999);
+
 // Generate Email Address
-const emailAddress = () => {
-  const email = `test-${dateAsNumber}-${Math.floor(
-    Math.random() * 999999,
-  )}@testingtoolkit.co.uk`;
-  return email;
-};
+const emailAddress = () =>
+  `test-${dateAsNumber()}-${randomNumber()}@testingtoolkit.co.uk`;
 
 // Generate Password
 const password = () => `.${faker.internet.password()}!`;
@@ -61,6 +60,7 @@ module.exports = {
   futureDate,
   recentDate,
   randomString,
+  randomNumber,
   dateAsNumber,
   user,
 };
