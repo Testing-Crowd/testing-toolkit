@@ -47,12 +47,11 @@ const user = () => {
 };
 
 // Generate String
-const randomString = faker.fake('{{random.words}}');
+const randomString = () => faker.fake('{{random.words}}');
 
 // Generate Phrase
-const randomPhrase = faker.fake(
-  '{{random.words}}-{{random.words}}-{{random.words}}',
-);
+const randomPhrase = () =>
+  faker.fake('{{random.words}}-{{random.words}}-{{random.words}}');
 
 // Exports --------------------------------------------------------------------------------------------------
 
