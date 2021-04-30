@@ -57,6 +57,7 @@ const randomPhrase = () =>
 
 module.exports = {
   emailAddress,
+  password,
   ipAddress,
   pastDate,
   futureDate,
