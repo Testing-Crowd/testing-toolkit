@@ -3,9 +3,6 @@ const faker = require('faker');
 
 // Functions ------------------------------------------------------------------------------------------------
 
-// Generate UUID
-const uuid = generateUUID();
-
 // Generate Email Address
 const emailAddress = () => {
   const email = `test-${new Date()
@@ -37,7 +34,7 @@ let futureDate = faker.date.future();
 
 // Generate User
 const user = {
-  id: uuid(),
+  id: generateUUID(),
   firstName: faker.name.firstName(),
   lastName: faker.name.lastName(),
   email: emailAddress(),
