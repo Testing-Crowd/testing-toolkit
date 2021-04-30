@@ -1,31 +1,39 @@
 const generateUUID = require('uuid/v4');
 const faker = require('faker');
 
-const generateID = () => generateUUID();
+// Functions ------------------------------------------------------------------------------------------------
 
-const generateFirstName = () => faker.name.firstName();
+// Generate UUID
+const uuid = () => generateUUID();
 
-const generateLastName = () => faker.name.lastName();
+// Generate First Name
+const firstName = () => faker.name.firstName();
 
-const generateEmail = () => {
-  const email = `test${new Date()
+// Generate Last Name
+const lastName = () => faker.name.lastName();
+
+// Generate Email Address
+const emailAddress = () => {
+  const email = `test-${new Date()
     .toISOString()
     .replace(/[^0-9]/g, '')}-${Math.floor(
     Math.random() * 999999,
-  )}@testingtoolkit.com`;
+  )}@testingtoolkit.co.uk`;
   return email;
 };
 
-const generateIPAddress = (country) => {
+// Generate IP Address
+const ipAddress = (country) => {
   if (!country) {
     return faker.internet.ip();
   }
 };
 
+// Exports --------------------------------------------------------------------------------------------------
 module.exports = {
-  generateEmail,
-  generateFirstName,
-  generateLastName,
-  generateIPAddress,
-  generateID,
+  emailAddress,
+  ipAddress,
+  lastName,
+  firstName,
+  uuid,
 };
