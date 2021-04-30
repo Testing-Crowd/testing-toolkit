@@ -4,13 +4,7 @@ const faker = require('faker');
 // Functions ------------------------------------------------------------------------------------------------
 
 // Generate UUID
-const uuid = () => generateUUID();
-
-// Generate First Name
-const firstName = () => faker.name.firstName();
-
-// Generate Last Name
-const lastName = () => faker.name.lastName();
+const uuid = generateUUID();
 
 // Generate Email Address
 const emailAddress = () => {
@@ -22,6 +16,9 @@ const emailAddress = () => {
   return email;
 };
 
+// Generate Password
+const password = `.${faker.internet.password()}!`;
+
 // Generate IP Address
 const ipAddress = (country) => {
   if (!country) {
@@ -29,11 +26,47 @@ const ipAddress = (country) => {
   }
 };
 
+// Generate Past Date
+let pastDate = faker.date.past();
+
+// Generate Recent Date
+let recentDate = faker.date.recent();
+
+// Generate Future Date
+let futureDate = faker.date.future();
+
+// Generate User
+const user = {
+  id: uuid(),
+  firstName: faker.name.firstName(),
+  lastName: faker.name.lastName(),
+  email: emailAddress(),
+  password: password(),
+  ipAddress: ipAddress(),
+  createdAt: pastDate(),
+  expireAt: futureDate(),
+};
+
+// Generate String
+const randomString = faker.fake(
+  '{{random.words}}-{{random.words}}-{{random.words}}',
+);
+
+// Generate Phrase
+const randomPhrase = faker.fake(
+  '{{random.words}}-{{random.words}}-{{random.words}}',
+);
+
 // Exports --------------------------------------------------------------------------------------------------
 module.exports = {
+  uuid,
+  password,
   emailAddress,
   ipAddress,
-  lastName,
-  firstName,
-  uuid,
+  pastDate,
+  futureDate,
+  recentDate,
+  randomString,
+  randomPhrase,
+  user,
 };
