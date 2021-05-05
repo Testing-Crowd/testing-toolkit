@@ -17,11 +17,7 @@ const emailAddress = () =>
 const password = () => `.${faker.internet.password()}!`;
 
 // Generate IP Address
-const ipAddress = (country) => {
-  if (!country) {
-    return faker.internet.ip();
-  }
-};
+const ipAddress = (country) => faker.internet.ip();
 
 // Generate Past Date
 const pastDate = () => faker.date.past();
