@@ -44,7 +44,7 @@ const user = () => {
 
 // Generate String
 const randomString = (numberOfWords = 1, seperator = ' ') =>
-  faker.random.words(numberOfWords).replace(' ', seperator);
+  faker.random.words(numberOfWords).replaceAll(' ', seperator);
 
 // Exports --------------------------------------------------------------------------------------------------
 
