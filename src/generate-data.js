@@ -42,21 +42,7 @@ const user = () => {
   };
 };
 
-  async addFieldOptions(optionsArray) {
-    const optionsLength = optionsArray.length;
-    let i;
-
-    for (i = 0; i < optionsLength - 1; i++) {
-      await t.click(this.addOptionButton);
-    }
-
-    for (i = 0; i < optionsLength; i++) {
-      await t.typeText(this.optionInput.nth(i), optionsArray[i], { paste: true });
-    }
-  }
-
 // Generate String
-
 const randomString = (numberOfWords = 1, seperator = ' ') => {
   let generatedString = '';
   let i;
