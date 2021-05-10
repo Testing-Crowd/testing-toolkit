@@ -47,7 +47,7 @@ const randomString = (numberOfWords = 1, seperator = ' ') => {
   let generatedString = '';
   let i;
 
-  const getString = () => {return faker.random.word().split(' ')[0]};
+  const getString = () => faker.random.word().split(' ')[0];
 
   generatedString = generatedString.concat(getString());
 
