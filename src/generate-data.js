@@ -42,9 +42,35 @@ const user = () => {
   };
 };
 
+  async addFieldOptions(optionsArray) {
+    const optionsLength = optionsArray.length;
+    let i;
+
+    for (i = 0; i < optionsLength - 1; i++) {
+      await t.click(this.addOptionButton);
+    }
+
+    for (i = 0; i < optionsLength; i++) {
+      await t.typeText(this.optionInput.nth(i), optionsArray[i], { paste: true });
+    }
+  }
+
 // Generate String
-const randomString = (numberOfWords = 1, seperator = ' ') =>
-  faker.random.words(numberOfWords).replaceAll(' ', seperator);
+
+const randomString = (numberOfWords = 1, seperator = ' ') => {
+  let generatedString = '';
+  let i;
+
+  const getString = () => {return faker.random.word().split(' ')[0]};
+
+  generatedString = generatedString.concat(getString());
+
+  for (i = 0; i < numberOfWords - 1; i++) {
+    generatedString = generatedString.concat(seperator, getString())
+  }
+
+  return generatedString;
+}
 
 // Exports --------------------------------------------------------------------------------------------------
 
