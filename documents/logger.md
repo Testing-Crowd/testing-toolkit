@@ -1,4 +1,4 @@
-# log
+# logger
 
 Simple, extensible logger.
 The default logging level is `INFO`, can be changed using an environment variable, `LOG_LEVEL`

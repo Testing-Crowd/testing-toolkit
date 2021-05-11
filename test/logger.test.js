@@ -17,9 +17,9 @@ describe('Logging', () => {
     });
 
     test('log object', () => {
-        const spy = jest.spyOn(logger, 'info').mockImplementation((msg) => msg);
+        const spy = jest.spyOn(logger, 'debug').mockImplementation((msg) => msg);
 
-        logger.info({ id: 1 }, 'Some message');
+        logger.debug({ id: 1 }, 'Some message');
 
         expect(spy).toHaveBeenCalled();
         expect(spy).toBeCalledWith({ id: 1 }, 'Some message');
