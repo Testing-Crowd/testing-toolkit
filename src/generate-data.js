@@ -43,8 +43,20 @@ const user = () => {
 };
 
 // Generate String
-const randomString = (numberOfWords = 1, seperator = ' ') =>
-  faker.random.words(numberOfWords).replace(' ', seperator);
+const randomString = (numberOfWords = 1, seperator = ' ') => {
+  let generatedString = '';
+  let i;
+
+  const getString = () => faker.random.word().split(' ')[0];
+
+  generatedString = generatedString.concat(getString());
+
+  for (i = 0; i < numberOfWords - 1; i++) {
+    generatedString = generatedString.concat(seperator, getString())
+  }
+
+  return generatedString;
+}
 
 // Exports --------------------------------------------------------------------------------------------------
 
