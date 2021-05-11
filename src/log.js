@@ -1,10 +1,7 @@
 const pino = require('pino');
 
-const log = pino({
-    level: process.env.LOG_LEVEL || 'info',
-    prettyPrint: {
-        levelFirst: true,
-    },
+const logger = pino({
+    level: process.env.LOG_LEVEL || 'info'
 });
 
-export { log as default };
+module.exports.logger = logger;

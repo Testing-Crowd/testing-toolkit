@@ -4,7 +4,6 @@
   "description": "Libraries helping Test Engineers.",
   "main": "index.js",
   "license": "UNLICENSED",
-  "type": "module",
   "dependencies": {
     "delay": "^4.3.0",
     "faker": "4.1.0",

@@ -12,4 +12,5 @@ Below is a list of the sections you have available, each has a range of function
 You can find out more by clicking the name and it will provide you with examples:
 
 * [generate](https://github.com/sswales/testing-toolkit/documents/generate.md) - Provides a wide rande of data randomly generated.
-* [err](https://github.com/sswales/testing-toolkit/documents/err.md) - Provides consitent error throw format.
+* [err](https://github.com/sswales/testing-toolkit/documents/err.md) - Provides consistent error throw format.
+* [log](https://github.com/sswales/testing-toolkit/documents/log.md) - Provides a flexible logger (based on [pino](https://github.com/pinojs/pino)).
