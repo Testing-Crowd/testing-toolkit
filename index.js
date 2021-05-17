@@ -1,9 +1,9 @@
 const generate = require('./src/generate-data');
 const err = require('./src/errors');
-const { logger } = require('./src/logger');
+const { log } = require('./src/log');
 
 module.exports = {
   generate,
   err,
-  logger
+  log
 };
