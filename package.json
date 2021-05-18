@@ -4,6 +4,7 @@
   "description": "Libraries helping Test Engineers.",
   "main": "index.js",
   "license": "UNLICENSED",
+  "type": "module",
   "dependencies": {
     "delay": "^4.3.0",
     "faker": "4.1.0",
@@ -36,5 +37,8 @@
     "type": "git",
     "url": "git+https://github.com/sswales/testing-toolkit.git"
   },
-  "author": "Shaun Swales <info@swalesconsultancy.co.uk>"
+  "author": "Shaun Swales <info@swalesconsultancy.co.uk>",
+    "jest": {
+    "verbose": true
+  }
 }
