@@ -1,6 +1,6 @@
 {
   "name": "testing-toolkit",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Libraries helping Test Engineers.",
   "main": "index.js",
   "license": "UNLICENSED",
@@ -30,7 +30,9 @@
     "jest": "^24.9.0"
   },
   "scripts": {
+    "clean": "rm -rf ./node_modules package-lock.json",
     "lint": "eslint .",
+    "prettier:fix": "prettier src/**/*.js test/**/*.js --write",
     "test": "jest"
   },
   "repository": {
@@ -38,7 +40,7 @@
     "url": "git+https://github.com/sswales/testing-toolkit.git"
   },
   "author": "Shaun Swales <info@swalesconsultancy.co.uk>",
-    "jest": {
+  "jest": {
     "verbose": true
   }
 }

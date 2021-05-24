@@ -10,8 +10,7 @@ const dateAsNumber = () => new Date().toISOString().replace(/[^0-9]/g, '');
 const randomNumber = () => Math.floor(Math.random() * 999999);
 
 // Generate Email Address
-const emailAddress = () =>
-  `test-${dateAsNumber()}-${randomNumber()}@testingtoolkit.co.uk`;
+const emailAddress = () => `test-${dateAsNumber()}-${randomNumber()}@testingtoolkit.co.uk`;
 
 // Generate Password
 const password = () => `.${faker.internet.password()}!`;
@@ -52,11 +51,11 @@ const randomString = (numberOfWords = 1, seperator = ' ') => {
   generatedString = generatedString.concat(getString());
 
   for (i = 0; i < numberOfWords - 1; i++) {
-    generatedString = generatedString.concat(seperator, getString())
+    generatedString = generatedString.concat(seperator, getString());
   }
 
   return generatedString;
-}
+};
 
 // Exports --------------------------------------------------------------------------------------------------
 
