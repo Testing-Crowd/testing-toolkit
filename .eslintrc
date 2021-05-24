@@ -2,13 +2,24 @@
   "parser": "babel-eslint",
   "env": {
     "node": true,
-    "jest": true
+    "jest": true,
+    "es2020": true
   },
   "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": "es2020",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
   "rules": {
-    "global-require": "off",
-    "no-use-before-define": ["error", { "functions": false }],
-    "class-methods-use-this": "off",
-    "no-console": "off"
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "no-unused-vars": "warn",
+    "no-console": 1,
+    "func-style": "error",
+    "no-only-tests/no-only-tests": "error"
   }
 }
