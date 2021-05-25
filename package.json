@@ -1,10 +1,9 @@
 {
   "name": "testing-toolkit",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Libraries helping Test Engineers.",
   "main": "index.js",
   "license": "UNLICENSED",
-  "type": "module",
   "dependencies": {
     "delay": "^4.3.0",
     "faker": "4.1.0",
