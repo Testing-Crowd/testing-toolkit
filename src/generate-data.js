@@ -4,7 +4,7 @@ const faker = require('faker');
 // Functions ------------------------------------------------------------------------------------------------
 
 // Generate Random Number Only String
-const dateAsNumber = () => new Date().toISOString().replace(/[^0-9]/g, '');
+const dateAsNumber = () => new Date().toISOString().replace(/[-:\.]/g, '');
 
 // Generate Number
 const randomNumber = () => Math.floor(Math.random() * 999999);
